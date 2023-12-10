@@ -1,0 +1,16 @@
+# Dictionary of places I want to visit with lists of the reasons imbeded in the value.
+# Code uses both for and while loops to print readable list
+
+count = 0
+lets_go = {
+  'Maldives':['ocean','secluded cabins','food'],
+  'Japan':['culture','food','samurai'],
+  'Budapest':['monks','food','mountains']
+}
+
+for key, value in lets_go.items():
+  count = 0
+  print(key + ':')
+  while count < len(value):
+    print('\t' + value[count])
+    count += 1

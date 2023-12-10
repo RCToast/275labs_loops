@@ -1,2 +1,2 @@
-# 275labs_loops
-Lab practice - loops
+# labs_275
+Lab practice

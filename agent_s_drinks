@@ -1,0 +1,52 @@
+# Agent S drink preferences
+  
+def drink_type(drink_choice):
+  tea = ['earl grey', 'black tea', 'green tea']
+  coffee = ['regular coffee', 'decaf coffee', 'latte', 'flat white', 'espresso']
+  if drink_choice in tea:
+    return 'tea'
+  elif drink_choice in coffee:
+    return 'coffee'
+  else:
+    return 'other drink'
+
+def milk(drink_choice):
+  milk_drink = ['regular coffee', 'decaf coffee', 'black tea']
+  if drink_choice in milk_drink:
+    return 'yes'
+  else:
+    return 'no'
+  
+def sugar(drink_choice):
+  sugar_drink = {
+    'regular coffee':2,
+    'decaf coffee':2,
+    'latte':2,
+    'flat white':2,
+    'earl grey':1,
+    'black tea':1
+  }
+  if drink_choice in sugar_drink:
+    return 'yes, ' + str(sugar_drink[drink_choice])
+  else:
+    return 'no'
+  
+def lemon(drink_choice):
+  lemon_drink = ['earl grey']
+  if drink_choice in lemon_drink:
+    return 'yes'
+  else:
+    return 'no'
+  
+drink_choice = 'regular coffee'
+
+print(drink_choice.title())
+print('\tMilk?: ' + milk(drink_choice))
+print('\tSugar?: ' + sugar(drink_choice))
+print('\tLemon?: ' + lemon(drink_choice))
+if drink_type(drink_choice) == 'tea':
+  print('\t\tAdd scone.')
+elif drink_type(drink_choice) == 'coffee':
+  print('\t\tAdd muffin')
+else:
+  print('\t\tNo adds')
